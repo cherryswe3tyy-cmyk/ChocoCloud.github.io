@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Choco Cloud — Artisanal Dessert & Bakery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Menghubungkan file CSS terpisah -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <div class="nav-container">
+      <a href="#home" class="logo-brand">
+        <img src="cloud-removebg-preview.png" alt="Choco Cloud Logo" class="nav-logo-img">
+        <span>Choco Cloud.</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#owner">Owner</a></li>
+          <li><a href="#review">Review</a></li>
+          <li><a href="#order">Order <span id="cartCount" class="cart-badge" style="display:none;">0</span></a></li>
+          <li><a href="#location">Lokasi</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 1. HOME -->
+  <section id="home">
+    <div class="hero-text">
+      <h1>Manisnya Momen Spesial di Setiap Gigitan</h1>
+      <p>Dessert artisanal buatan rumah dengan bahan premium pilihan, dipanggang segar setiap pagi tanpa bahan pengawet.</p>
+      <a href="#menu" class="btn">Lihat Menu Favorit</a>
+    </div>
+    <div class="hero-video">
+      <video autoplay muted loop playsinline>
+        <source src="Iklan.mp4" type="video/mp4">
+        Browser Anda tidak mendukung tag video.
+      </video>
+    </div>
+  </section>
+
+  <!-- BANNER IKLAN / PROMO SPESIAL -->
+  <div class="promo-banner">
+    <h2>🎉 PROMO FLASH SALE WEEKEND! 🎉</h2>
+    <p>Dapatkan diskon spesial <strong>20%</strong> untuk semua pembelian Box Dessert & Free Ongkir khusus wilayah Haurgeulis & sekitarnya!</p>
+    <a href="#menu" class="promo-btn">Pesan Sekarang & Ambil Diskonnya</a>
+  </div>
+
+  <!-- 2. ABOUT -->
+  <section id="about">
+    <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80" alt="Proses Pembuatan Kue">
+    <div>
+      <h2>Tentang Choco Cloud</h2>
+      <p style="margin-top: 0.8rem; color: var(--muted);">
+        Berawal dari dapur kecil pada tahun 2022, <strong>Choco Cloud</strong> hadir untuk menghadirkan dessert dengan rasa manis yang pas, tekstur lembut, dan tampilan yang memanjakan mata.
+      </p>
+      <div class="about-features">
+        <div class="feature-box"><strong>100% Fresh</strong><br>Dibuat sesuai pesanan setiap hari.</div>
+        <div class="feature-box"><strong>Bahan Premium</strong><br>Mentega asli & cokelat Belgia.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. MENU -->
+  <section id="menu">
+    <div class="section-title">
+      <h2>Menu Favorit Kami</h2>
+      <p>Pilih dessert favoritmu, masukkan ke keranjang, dan pesan sekaligus</p>
+    </div>
+
+    <div class="menu-grid">
+      <!-- Menu 1 -->
+      <div class="menu-card">
+        <img src="@XooAmanda.jpg" alt="Classic Tiramisu Box">
+        <div class="menu-info">
+          <div>
+            <h3>Classic Tiramisu Box</h3>
+            <p>Lapisan ladyfinger espresso dengan krim mascarpone lembut dan taburan kakao.</p>
+          </div>
+          <div class="menu-bottom">
+            <span class="price">Rp 45.000</span>
+            <button class="btn btn-small" onclick="tambahKeKeranjang('Classic Tiramisu Box', 45000)">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu 2 -->
+      <div class="menu-card">
+        <img src="14 Valentine ideas food for you.jpg" alt="Chocolate Covered Strawberries">
+        <div class="menu-info">
+          <div>
+            <h3>Chocolate Covered Strawberries</h3>
+            <p>Stroberi segar pilihan dilapisi cokelat premium leleh dengan taburan kacang gurih.</p>
+          </div>
+          <div class="menu-bottom">
+            <span class="price">Rp 35.000</span>
+            <button class="btn btn-small" onclick="tambahKeKeranjang('Chocolate Covered Strawberries', 35000)">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu 3 -->
+      <div class="menu-card">
+        <img src="500884789829375625.jpg" alt="Berry Mini Cheesecake">
+        <div class="menu-info">
+          <div>
+            <h3>Berry Mini Cheesecake</h3>
+            <p>Mini cheesecake lembut dengan selai buah beri segar dan topping buah utuh.</p>
+          </div>
+          <div class="menu-bottom">
+            <span class="price">Rp 42.000</span>
+            <button class="btn btn-small" onclick="tambahKeKeranjang('Berry Mini Cheesecake', 42000)">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu 4 -->
+      <div class="menu-card">
+        <img src="728175833543111245.jpg" alt="Belgian Fudgy Brownies">
+        <div class="menu-info">
+          <div>
+            <h3>Belgian Fudgy Brownies</h3>
+            <p>Brownies cokelat pekat dengan lapisan shiny crust dan saus cokelat leleh.</p>
+          </div>
+          <div class="menu-bottom">
+            <span class="price">Rp 38.000</span>
+            <button class="btn btn-small" onclick="tambahKeKeranjang('Belgian Fudgy Brownies', 38000)">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu 5 -->
+      <div class="menu-card">
+        <img src="863424559851139742.jpg" alt="Choco Fudge Drip Cake">
+        <div class="menu-info">
+          <div>
+            <h3>Choco Fudge Drip Cake</h3>
+            <p>Kue cokelat utuh dengan krim vanila, lelehan cokelat mewah, dan dekorasi cokelat.</p>
+          </div>
+          <div class="menu-bottom">
+            <span class="price">Rp 120.000</span>
+            <button class="btn btn-small" onclick="tambahKeKeranjang('Choco Fudge Drip Cake', 120000)">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu 6 -->
+      <div class="menu-card">
+        <img src="cheescake.jpg" alt="Signature Berry Cheesecake">
+        <div class="menu-info">
+          <div>
+            <h3>Signature Berry Cheesecake</h3>
+            <p>Slice cheesecake klasik dengan limpahan saus stroberi dan bluberi segar.</p>
+          </div>
+          <div class="menu-bottom">
+            <span class="price">Rp 50.000</span>
+            <button class="btn btn-small" onclick="tambahKeKeranjang('Signature Berry Cheesecake', 50000)">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu 7 -->
+      <div class="menu-card">
+        <img src="churros.jpg" alt="Crispy Churros & Choco Dip">
+        <div class="menu-info">
+          <div>
+            <h3>Crispy Churros & Choco Dip</h3>
+            <p>Churros renyah bertabur kayu manis dan gula, disajikan dengan saus cokelat kental.</p>
+          </div>
+          <div class="menu-bottom">
+            <span class="price">Rp 32.000</span>
+            <button class="btn btn-small" onclick="tambahKeKeranjang('Crispy Churros & Choco Dip', 32000)">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu 8 -->
+      <div class="menu-card">
+        <img src="creme.jpg" alt="Vanilla Crème Brûlée">
+        <div class="menu-info">
+          <div>
+            <h3>Vanilla Crème Brûlée</h3>
+            <p>Kustar vanila lembut dengan lapisan karamel renyah di atasnya, hiasan buah segar.</p>
+          </div>
+          <div class="menu-bottom">
+            <span class="price">Rp 40.000</span>
+            <button class="btn btn-small" onclick="tambahKeKeranjang('Vanilla Crème Brûlée', 40000)">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu 9 -->
+      <div class="menu-card">
+        <img src="download (1).jpg" alt="Strawberry Fluffy Pancakes">
+        <div class="menu-info">
+          <div>
+            <h3>Strawberry Fluffy Pancakes</h3>
+            <p>Pancake merah lembut bertumpuk dengan saus putih manis dan buah stroberi segar.</p>
+          </div>
+          <div class="menu-bottom">
+            <span class="price">Rp 45.000</span>
+            <button class="btn btn-small" onclick="tambahKeKeranjang('Strawberry Fluffy Pancakes', 45000)">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. GALLERY -->
+  <section id="gallery">
+    <div class="section-title">
+      <h2>Sweet Gallery</h2>
+      <p>Koleksi kreasi dessert lezat dan menggugah selera dari dapur kami</p>
+    </div>
+
+    <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; padding: 0 20px;">
+      <img src="@XooAmanda.jpg" alt="Classic Tiramisu Gallery">
+      <img src="14 Valentine ideas food for you.jpg" alt="Chocolate Strawberries Gallery">
+      <img src="500884789829375625.jpg" alt="Mini Cheesecake Gallery">
+      <img src="728175833543111245.jpg" alt="Belgian Fudgy Brownies Gallery">
+      <img src="863424559851139742.jpg" alt="Choco Fudge Drip Cake Gallery">
+      <img src="894246069778713753.jpg" alt="Extra Choco Birthday Cake Gallery">
+      <img src="cheescake.jpg" alt="Signature Berry Cheesecake Gallery">
+      <img src="churros.jpg" alt="Crispy Churros Gallery">
+      <img src="creme.jpg" alt="Vanilla Creme Brulee Gallery">
+      <img src="download (1).jpg" alt="Strawberry Pancakes Gallery">
+    </div>
+  </section>
+
+  <!-- 5. OWNER SECTION -->
+  <section id="owner">
+    <div class="section-title">
+      <h2>Tim Di Balik Choco Cloud</h2>
+      <p>Empat sekawan yang meracik kebahagiaan di setiap box dessert</p>
+    </div>
+
+    <div class="owner-team-grid">
+      <div class="owner-card">
+        <img src="annisah.jpeg" alt="Annisa" class="owner-circle-img" onerror="this.src='annisah.jpeg'">
+        <h3>Annisa</h3>
+        <span class="owner-role">Head Baker</span>
+      </div>
+      <div class="owner-card">
+        <img src="aulia.jpg" alt="Aulia" class="owner-circle-img" onerror="this.src='aulia.jpeg'">
+        <h3>Aulia</h3>
+        <span class="owner-role">Recipe Developer</span>
+      </div>
+      <div class="owner-card">
+        <img src="imut.jpeg" alt="Zaskia" class="owner-circle-img" onerror="this.src='imut.jpeg'">
+        <h3>Zaskia</h3>
+        <span class="owner-role">Creative & Quality</span>
+      </div>
+      <div class="owner-card">
+        <img src="salwa.jpeg" alt="Salwa" class="owner-circle-img" onerror="this.src='https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80'">
+        <h3>Salwa</h3>
+        <span class="owner-role">Marketing & Order</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. REVIEW -->
+  <section id="review">
+    <div class="section-title">
+      <h2>Kata Pelanggan Kami</h2>
+      <p>Lebih dari 1.000+ box dessert telah menemani hari manis mereka</p>
+    </div>
+
+    <div class="review-grid">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Burnt Cheesecake & Berry Cheesecake-nya juara banget! Lumer, creamy, dan manisnya nggak bikin enek."</p>
+        <div class="reviewer">— Nadya Putri, Jakarta</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Pesan Tiramisu Box buat ulang tahun sahabat, packaging-nya cantik banget dan rasanya bintang lima."</p>
+        <div class="reviewer">— Raka Pratama, Bandung</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Fudgy Brownies sama Churros-nya wajib coba. Cokelatnya berasa premium dan teksturnya pas banget!"</p>
+        <div class="reviewer">— Sinta Maharani, Tangerang</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. ORDER / KERANJANG -->
+  <section id="order">
+    <div class="section-title">
+      <h2>Keranjang Belanja & Pemesanan</h2>
+      <p>Periksa pesananmu di bawah ini lalu kirim langsung ke WhatsApp</p>
+    </div>
+
+    <div class="order-box" style="max-width: 600px; margin: 0 auto;">
+      <!-- Tampilan Daftar Keranjang -->
+      <div class="cart-container">
+        <h3 style="margin-bottom: 12px; font-family: 'Playfair Display', serif;">Daftar Pesanan Anda</h3>
+        <div id="cartList">
+          <p style="color: #888; text-align: center; padding: 20px 0;">Keranjang masih kosong. Yuk pilih menu favoritmu!</p>
+        </div>
+        <div id="cartTotalSection" style="display: none;">
+          <div class="cart-total">
+            <span>Total Estimasi:</span>
+            <span id="grandTotal">Rp 0</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form Data Pemesan -->
+      <form id="orderForm" onsubmit="kirimWhatsApp(event)">
+        <div class="form-group">
+          <label for="nama">Nama Lengkap</label>
+          <input type="text" id="nama" required placeholder="Contoh: Budi Santoso">
+        </div>
+        <div class="form-group">
+          <label for="metode">Metode Pengambilan / Pengiriman</label>
+          <select id="metode" class="form-control" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ddd; font-family: inherit;">
+            <option value="Delivery (Kurir / GoSend/Grab)">Delivery (Kurir / GoSend / Grab)</option>
+            <option value="Ambil Sendiri ke Lokasi (Takeaway)">Ambil Sendiri ke Lokasi (Takeaway)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="catatan">Catatan Tambahan (Opsional)</label>
+          <textarea id="catatan" rows="3" placeholder="Contoh: Kurangi manis sedikit / Alamat lengkap pengiriman"></textarea>
+        </div>
+        <button type="submit" class="btn" style="width: 100%;">Kirim Semua Pesanan ke WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- 8. LOKASI & GOOGLE MAPS (HAURGEULIS, INDRAMAYU) -->
+  <section id="location" style="background-color: #faf5f2; padding: 60px 20px;">
+    <div class="section-title">
+      <h2>Lokasi & Pengambilan Pesanan</h2>
+      <p>Kunjungi dapur kami atau ambil langsung pesananmu di sini</p>
+    </div>
+
+    <div style="max-width: 900px; margin: 0 auto; background: #fff; padding: 25px; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+      <div style="margin-bottom: 20px; text-align: center;">
+        <h3 style="margin-bottom: 8px; font-family: 'Playfair Display', serif;">Choco Cloud Kitchen Haurgeulis</h3>
+        <p style="color: #666; font-size: 0.95rem;">Jl. Melati No. 45, Haurgeulis, Kabupaten Indramayu, Jawa Barat</p>
+        <p style="color: #888; font-size: 0.85rem; margin-top: 4px;">Jam Operasional: Senin - Minggu (09.00 - 18.00 WIB)</p>
+      </div>
+      
+      <!-- Google Maps Embed Haurgeulis, Indramayu -->
+      <div style="width: 100%; height: 350px; border-radius: 12px; overflow: hidden;">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.9528994784915!2d107.9542548!3d-6.4398188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f4777a94042db%3A0xf457637841c7b83d!2sHaurgeulis%2C%20Indramayu%20Regency%2C%20West%20Java!5e0!3m2!1sid!2sid!4v1620000000000!5m2!1sid!2sid" 
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+      
+      <div style="text-align: center; margin-top: 20px;">
+        <a href="https://maps.app.goo.gl/HaurgeulisIndramayu" target="_blank" class="btn btn-small" style="text-decoration: none; display: inline-block;">Buka di Google Maps App</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Choco Cloud Dessert. All rights reserved.</p>
+  </footer>
+
+  <!-- SCRIPT KERANJANG & WHATSAPP -->
+  <script>
+    let keranjang = [];
+
+    function tambahKeKeranjang(namaMenu, harga) {
+      let itemAda = keranjang.find(item => item.nama === namaMenu);
+      if (itemAda) {
+        itemAda.jumlah += 1;
+      } else {
+        keranjang.push({ nama: namaMenu, harga: harga, jumlah: 1 });
+      }
+      updateTampilanKeranjang();
+      alert(namaMenu + " berhasil ditambahkan ke keranjang!");
+    }
+
+    function ubahJumlah(index, aksi) {
+      if (aksi === 'tambah') {
+        keranjang[index].jumlah += 1;
+      } else if (aksi === 'kurang') {
+        keranjang[index].jumlah -= 1;
+        if (keranjang[index].jumlah <= 0) {
+          keranjang.splice(index, 1);
+        }
+      }
+      updateTampilanKeranjang();
+    }
+
+    function hapusItem(index) {
+      keranjang.splice(index, 1);
+      updateTampilanKeranjang();
+    }
+
+    function updateTampilanKeranjang() {
+      const cartList = document.getElementById('cartList');
+      const cartTotalSection = document.getElementById('cartTotalSection');
+      const grandTotal = document.getElementById('grandTotal');
+      const cartCount = document.getElementById('cartCount');
+
+      let totalItemCount = keranjang.reduce((sum, item) => sum + item.jumlah, 0);
+      if (totalItemCount > 0) {
+        cartCount.style.display = 'inline-block';
+        cartCount.innerText = totalItemCount;
+      } else {
+        cartCount.style.display = 'none';
+      }
+
+      if (keranjang.length === 0) {
+        cartList.innerHTML = `<p style="color: #888; text-align: center; padding: 20px 0;">Keranjang masih kosong. Yuk pilih menu favoritmu!</p>`;
+        cartTotalSection.style.display = 'none';
+        return;
+      }
+
+      cartTotalSection.style.display = 'block';
+      let html = '';
+      let totalSemua = 0;
+
+      keranjang.forEach((item, index) => {
+        let subtotal = item.harga * item.jumlah;
+        totalSemua += subtotal;
+        html += `
+          <div class="cart-item">
+            <div class="cart-item-details">
+              <h4>${item.nama}</h4>
+              <p>Rp ${item.harga.toLocaleString('id-ID')} x ${item.jumlah} = <strong>Rp ${subtotal.toLocaleString('id-ID')}</strong></p>
+            </div>
+            <div class="cart-actions">
+              <button class="btn-qty" onclick="ubahJumlah(${index}, 'kurang')">-</button>
+              <span>${item.jumlah}</span>
+              <button class="btn-qty" onclick="ubahJumlah(${index}, 'tambah')">+</button>
+              <button class="btn-danger" onclick="hapusItem(${index})">Hapus</button>
+            </div>
+          </div>
+        `;
+      });
+
+      cartList.innerHTML = html;
+      grandTotal.innerText = 'Rp ' + totalSemua.toLocaleString('id-ID');
+    }
+
+    function kirimWhatsApp(e) {
+      e.preventDefault();
+
+      if (keranjang.length === 0) {
+        alert("Keranjang belanjaan kamu masih kosong! Silakan pilih minimal 1 menu.");
+        return;
+      }
+
+      const nama = document.getElementById('nama').value;
+      const metode = document.getElementById('metode').value;
+      const catatan = document.getElementById('catatan').value;
+      const nomorWa = "6281234567890"; // Ganti dengan nomor WhatsApp Anda
+
+      let daftarPesananStr = "";
+      let totalSemua = 0;
+
+      keranjang.forEach((item, i) => {
+        let subtotal = item.harga * item.jumlah;
+        totalSemua += subtotal;
+        daftarPesananStr += `%0A${i + 1}. ${item.nama} (${item.jumlah}x) - Rp ${subtotal.toLocaleString('id-ID')}`;
+      });
+
+      const pesan = `Halo Choco Cloud, saya ingin memesan:%0A` +
+                    `---------------------------------------` +
+                    `${daftarPesananStr}%0A` +
+                    `---------------------------------------` +
+                    `%0A*Total Pembayaran: Rp ${totalSemua.toLocaleString('id-ID')}*` +
+                    `%0A%0A- Nama: ${nama}` +
+                    `%0A- Metode: ${metode}` +
+                    `%0A- Catatan/Alamat: ${catatan ? catatan : '-'}`;
+
+      window.open(`https://wa.me/${nomorWa}?text=${pesan}`, '_blank');
+    }
+  </script>
+
+</body>
+</html>
